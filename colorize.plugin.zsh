@@ -176,4 +176,10 @@ if (( $+commands[grc] )); then
       command grc -c /usr/share/grc/conf.log cat "$@"
     }
   fi
+  
+  if (( $+commands[nali-dig] )); then
+    function nali-dig() {
+      command grc -c /usr/share/grc/conf.dig nali-dig "$@"
+    }
+  fi
 fi
