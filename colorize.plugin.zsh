@@ -164,4 +164,16 @@ if (( $+commands[grc] )); then
       command grc --colour=auto iptables "$@"
     }
   fi
+  
+  if (( $+commands[sysctl] )); then
+    function sysctl() {
+      command grc --colour=auto sysctl "$@"
+    }
+  fi
+  
+  if (( $+commands[cat] )); then
+    function cat() {
+      command grc --colour=auto cat "$@"
+    }
+  fi
 fi
