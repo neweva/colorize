@@ -151,4 +151,17 @@ if (( $+commands[grc] )); then
       command grc --colour=auto traceroute "$@"
     }
   fi
+  
+  # Superfei commands
+  if (( $+commands[journalctl] )); then
+    function journalctl() {
+      command grc --colour=auto journalctl "$@"
+    }
+  fi
+
+  if (( $+commands[iptables] )); then
+    function iptables() {
+      command grc --colour=auto iptables "$@"
+    }
+  fi
 fi
