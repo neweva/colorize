@@ -173,7 +173,7 @@ if (( $+commands[grc] )); then
   
   if (( $+commands[cat] )); then
     function cat() {
-      command grc --colour=auto cat "$@"
+      command grc -c /usr/share/grc/conf.log cat "$@"
     }
   fi
 fi
