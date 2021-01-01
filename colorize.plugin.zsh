@@ -194,4 +194,10 @@ if (( $+commands[grc] )); then
       command grc -c ~/.neweva.grc iperf3 "$@"
     }
   fi
+  
+  if (( $+commands[run-parts] )); then
+    function run-parts() {
+      command grc -c ~/.neweva.grc run-parts "$@"
+    }
+  fi
 fi
