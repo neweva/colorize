@@ -155,7 +155,13 @@ if (( $+commands[grc] )); then
   # Superfei commands
   if (( $+commands[journalctl] )); then
     function journalctl() {
-      command grc --colour=auto journalctl "$@"
+      command grc -c ~/.neweva.grc journalctl "$@"
+    }
+  fi
+  
+  if (( $+commands[systemctl] )); then
+    function systemctl() {
+      command grc -c ~/.neweva.grc systemctl "$@"
     }
   fi
 
@@ -173,7 +179,7 @@ if (( $+commands[grc] )); then
   
   if (( $+commands[cat] )); then
     function cat() {
-      command grc -c /usr/share/grc/conf.log cat "$@"
+      command grc -c ~/.neweva.grc cat "$@"
     }
   fi
   
