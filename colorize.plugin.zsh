@@ -188,4 +188,10 @@ if (( $+commands[grc] )); then
       command grc -c /usr/share/grc/conf.dig nali-dig "$@"
     }
   fi
+ 
+  if (( $+commands[iperf3] )); then
+    function iperf3() {
+      command grc -c ~/.neweva.grc iperf3 "$@"
+    }
+  fi
 fi
