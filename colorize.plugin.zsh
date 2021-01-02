@@ -215,7 +215,7 @@ if (( $+commands[grc] )); then
 
   if (( $+commands[git] )); then
     function git() {
-      command grc -c ~/.neweva.grc git "$@"
+      command grc -c ~/.login-info.grc git "$@"
     }
   fi
 fi
