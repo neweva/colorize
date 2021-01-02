@@ -200,4 +200,10 @@ if (( $+commands[grc] )); then
       command grc -c ~/.neweva.grc run-parts "$@"
     }
   fi
+  
+  if (( $+commands[scp] )); then
+    function scp() {
+      command grc -c ~/.neweva.grc scp "$@"
+    }
+  fi
 fi
