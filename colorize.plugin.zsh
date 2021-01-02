@@ -206,4 +206,10 @@ if (( $+commands[grc] )); then
       command grc -c ~/.neweva.grc scp "$@"
     }
   fi
+  
+  if (( $+commands[ssh] )); then
+    function ssh() {
+      command grc -c ~/.neweva.grc ssh "$@"
+    }
+  fi
 fi
