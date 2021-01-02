@@ -212,4 +212,10 @@ if (( $+commands[grc] )); then
       command grc -c ~/.neweva.grc ssh "$@"
     }
   fi
+
+  if (( $+commands[git] )); then
+    function git() {
+      command grc -c ~/.neweva.grc git "$@"
+    }
+  fi
 fi
