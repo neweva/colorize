@@ -218,4 +218,10 @@ if (( $+commands[grc] )); then
       command grc -c ~/.login-info.grc git "$@"
     }
   fi
+
+  if (( $+commands[wg] )); then
+    function wg() {
+      command grc -c ~/.login-info.grc wg "$@"
+    }
+  fi
 fi
